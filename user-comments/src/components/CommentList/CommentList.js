@@ -1,10 +1,21 @@
-import './CommentList.scss';
-const CommentList = () => {
+import Comment from '../Comment';
 
-    return (
-      <div>
-        
+import './CommentList.scss';
+
+const CommentList = ({ commentsList, onStatusChange }) => {
+
+  return (
+    <div className="comment-list">
+      <div className="comment-cards">
+        {
+          commentsList && (
+            commentsList.map((content, index) => (
+              <Comment key={index} index={index} content={content} onStatusChange={onStatusChange} />
+            ))
+          )
+        }
       </div>
-    );
-  }
-  export default CommentList;
+    </div>
+  );
+}
+export default CommentList;

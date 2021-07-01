@@ -1,0 +1,27 @@
+@import "../../styles/index";
+
+.main-section{
+    .comment-page{
+        background-color: $black;
+        min-height: calc(90vh - 180px);
+        display:flex;
+        color:$white;
+        padding:$space-08;
+    }
+    header{
+        background-color: $black500;
+        padding: $space-02;
+        padding-left: $space-08;
+        text-align: left;
+        color:$white;
+        h2{
+            font-weight: normal;
+        }
+    }
+    footer{
+        background-color: $black500;
+        padding:$space-02;
+        text-align: center;
+        color:$white;
+    }
+}

@@ -10,17 +10,26 @@ const CommentPage = () => {
   const addCommentInCommentList = (comment) => {
     setCommentsList([...commentsList, comment]);
   }
+  const onStatusChange = index => {
+    const updatedCommentObj = { ...commentsList[index], status:'Done'};
+    const updatedCommentList = [
+      ...commentsList.slice(0, index),
+      updatedCommentObj,
+      ...commentsList.slice(index+1),
+    ];
+    setCommentsList([...updatedCommentList]);
+  }
 
   return (
-    <main className="mainSection">
-      <header className="headerSection">
+    <main className="main-section">
+      <header className="header-section">
         <h2>User Comments</h2>
       </header>
-      <div className="CommentPage">
+      <div className="comment-page">
         <CommentForm addCommentInCommentList={addCommentInCommentList} />
-        <CommentList commentsList={commentsList} />
+        <CommentList commentsList={commentsList} onStatusChange={onStatusChange} />
       </div>
-      <footer className="footerSection">
+      <footer className="footer-section">
         <p>Footer</p>
       </footer>
     </main>

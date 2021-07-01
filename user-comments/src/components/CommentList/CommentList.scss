@@ -1,0 +1,15 @@
+@import "../../styles/index";
+
+.comment-list{
+    width:50%;
+    margin: $space-04;
+    .comment-cards{
+        padding:$space-04;
+        margin:1rem;
+        max-height:calc(85vh - 180px);
+        min-height: 78vh;
+        border: 1px solid $grey;
+        overflow-y: auto;
+        border-radius: $space-02;
+    }
+}

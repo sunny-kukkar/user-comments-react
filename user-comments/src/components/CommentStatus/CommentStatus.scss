@@ -1,0 +1,32 @@
+@import "../../styles/index";
+
+.comment-status{
+    border:1px solid $white;
+    padding: $space-02;
+    color: $white;
+    font-size: 0.8rem;
+    background-color: $black500;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    float:left;
+    width:150px;
+}
+.comment-status.done{
+    color:$yellow;
+}
+.comment-actions{
+    float:right;
+}
+.change-status{
+    padding:0px;
+    height: 28px;
+    width:30px;
+    cursor:pointer;
+    .icon{
+        height:24px;
+        width:24px;
+    }
+}
